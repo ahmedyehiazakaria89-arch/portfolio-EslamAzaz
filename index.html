@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Global box-sizing to avoid layout issues */
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ocean-dark: #014f86;
+      --ocean-mid: #2a6f97;
+      --ocean-light: #89c2d9;
+      --ocean-soft: #caf0f8;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--ocean-soft);
+      color: var(--ocean-dark);
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      background: white;
+      padding: 15px 30px; /* extra right padding prevents last link behind scrollbar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: visible;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--ocean-dark);
+    }
+
+    nav ul.nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      flex-wrap: nowrap;
+      overflow: visible;
+    }
+
+    nav ul.nav-links li {
+      flex: 0 0 auto; /* prevents shrinking of links */
+    }
+
+    nav ul.nav-links li a {
+      text-decoration: none;
+      color: var(--ocean-mid);
+      font-weight: bold;
+    }
+
+    nav ul.nav-links li a:hover {
+      color: var(--ocean-dark);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      margin-top: 120px;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .profile-img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid var(--ocean-light);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 20px 0 10px 0;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      background: var(--ocean-mid);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .links a:hover {
+      background: var(--ocean-dark);
+    }
+
+    /* SECTIONS */
+    .section {
+      background: white;
+      padding: 40px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--ocean-dark);
+    }
+
+    /* Skills list as boxes */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+
+    .skills-list li {
+      background: var(--ocean-light);
+      color: var(--ocean-dark);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      nav ul.nav-links {
+        display: none; /* replace with mobile menu if needed */
+      }
+      .profile-img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Eslam Azaz</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <img src="eslam_pic.png" alt="Profile" class="profile-img">
+    <h1>Eslam Azaz Sadek Metwally</h1>
+    <p>Communications & Electronics Engineer</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/eslam-sadek-4a43a191/" target="_blank">LinkedIn</a>
+      <a href="Eslam_Azaz_CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <h2>About</h2>
+    <p>Experienced Communications & Electronics Engineer with extensive experience in aviation information systems, low-current systems, and technical maintenance. Known for strong problem‑solving abilities, responsibility, and the capability to manage mission‑critical systems efficiently.</p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section" id="education">
+    <h2>Education</h2>
+    <p><strong>BSc in Communications & Electronics Engineering</strong><br>
+    Alexandria University (2007–2012)<br>
+    Total Grade: Very Good<br>
+    Graduation Project: Hash Car — Excellent</p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section" id="experience">
+    <h2>Experience</h2>
+    <p><strong>AVIT</strong> — Site Engineer (2016 – Present)<br>
+    Managing aviation information systems (CUTE, AMS, BRS, CMUSE, AODB) at Borg El Arab International Airport.</p>
+    <p><strong>Target Toshiba</strong> — Maintenance Engineer (2014 – 2016)<br>
+    Maintained and serviced Toshiba copiers and fax devices.</p>
+    <p><strong>Mindware Technology</strong> — Low Current Systems Engineer (2014)<br>
+    Installed and configured CCTV, alarm systems, and fingerprint systems in various environments.</p>
+  </div>
+
+  <!-- COURSES -->
+  <div class="section" id="courses">
+    <h2>Courses</h2>
+    <p>GSM, GPRS, UMTS, LTE</p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Hard worker</li>
+      <li>Problem solver</li>
+      <li>Organized</li>
+      <li>Fast learner</li>
+      <li>Decision maker</li>
+      <li>Works under pressure</li>
+      <li>Culturally aware</li>
+    </ul>
+    <p><strong>Programming:</strong> Matlab, C</p>
+    <p><strong>Tools:</strong> PowerPoint, Internet Research</p>
+    <p><strong>Languages:</strong> Arabic (Native), English (Very Good)</p>
+  </div>
+
+</body>
+</html>
