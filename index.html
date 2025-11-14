@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <style>
-    /* Global box-sizing to avoid layout issues */
+    /* Global box-sizing */
     * {
       box-sizing: border-box;
     }
@@ -29,7 +29,7 @@
     nav {
       width: 100%;
       background: white;
-      padding: 15px 30px; /* extra right padding prevents last link behind scrollbar */
+      padding: 15px 30px;
       position: fixed;
       top: 0;
       left: 0;
@@ -59,7 +59,7 @@
     }
 
     nav ul.nav-links li {
-      flex: 0 0 auto; /* prevents shrinking of links */
+      flex: 0 0 auto;
     }
 
     nav ul.nav-links li a {
@@ -148,10 +148,21 @@
       font-weight: bold;
     }
 
+    /* Contact links styling */
+    #contact a {
+      color: var(--ocean-mid);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact a:hover {
+      color: var(--ocean-dark);
+    }
+
     /* RESPONSIVE */
     @media (max-width: 600px) {
       nav ul.nav-links {
-        display: none; /* replace with mobile menu if needed */
+        display: none;
       }
       .profile-img {
         width: 200px;
@@ -171,6 +182,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#courses">Courses</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -181,7 +193,7 @@
     <p>Communications & Electronics Engineer</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/eslam-sadek-4a43a191/" target="_blank">LinkedIn</a>
-      <a href="Eslam_Azaz_CV.pdf" download>Download CV</a>
+      <a href="Eslam_Azaz_CV.pdf" download>CV</a>
     </div>
   </div>
 
@@ -232,6 +244,17 @@
     <p><strong>Programming:</strong> Matlab, C</p>
     <p><strong>Tools:</strong> PowerPoint, Internet Research</p>
     <p><strong>Languages:</strong> Arabic (Native), English (Very Good)</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me via:</p>
+    <ul>
+      <li>Email: <a href="mailto:eslam.azaz.sadek@gmail.com">eslam.azaz.sadek@gmail.com</a></li>
+      <li>Phone: +20 1285581563</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/eslam-sadek-4a43a191/" target="_blank">Eslam Azaz</a></li>
+    </ul>
   </div>
 
 </body>
